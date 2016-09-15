@@ -1,0 +1,14 @@
+span.red {
+  color: red;
+}
+
+span.green {
+  color: green;
+}
+input[type="text"].red {
+  border: 1px solid red;
+}
+
+input[type="text"].green {
+  border: 1px solid green;
+}
