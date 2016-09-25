@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Angular JS</title>
+  </head>
+  <body ng-app="ServiceApp">
+    <div ng-controller="AddController as itemAdder">
+      <input type="text" name="name" value="" ng-model="itemAdder.name" placeholder="Name of item">
+      <input type="text" name="quantity" value="" ng-model="itemAdder.quantity" placeholder="Quantity of item">
+      <button type="button" name="add" ng-click="itemAdder.addItem()">Add item</button>
+    </div>
+    <div ng-controller="ViewController as itemViewer">
+      <ol>
+        <li ng-repeat="item in itemViewer.items">
+          {{item.quantity}} of {{item.name}}
+          <button type="button" name="remove" ng-click="itemViewer.remove($index)">Remove item</button>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>
