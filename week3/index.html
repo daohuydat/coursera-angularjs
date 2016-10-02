@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <title>Dao Huy Dat - Module 3 solution</title>
+    <style media="screen">
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body ng-app="NarrowItDownApp">
+    <br>
+    <br>
+    <div ng-controller="NarrowItDownController as menu" class="container">
+      <form class="form-inline">
+        <input class="form-control" type="text" name="name" value="" ng-model="menu.name" placeholder="Name of item">
+        <button class="btn btn-success" type="button" name="add" ng-click="menu.narrow()">Narrow It Down For Me!</button>
+      </form>
+
+
+      <found-items items="menu.founds" title="{{menu.title}}"
+      on-remove="menu.removeItem(index)">
+      </found-items>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
